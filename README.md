@@ -36,7 +36,7 @@ To be added after the workshop :)
 As always, we hope you found the workshop fun and informative.  
 Don't forget that we always welcome feedback!
   
-Marwan Alani
-CS Hub - 2016
+Marwan Alani  
+CS Hub - 2016  
 www.cshub.ca
   
