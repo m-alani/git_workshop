@@ -1,0 +1,324 @@
+m_alani:~/workspace (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace (master) $ cd ..
+m_alani:~ $ ls
+lib/  workspace/
+m_alani:~ $ cd workspace
+m_alani:~/workspace (master) $ mkdir workshop
+m_alani:~/workspace (master) $ ls'
+> ^C
+m_alani:~/workspace (master) $ 
+m_alani:~/workspace (master) $ ls
+README.md  names.txt  tutorial.txt  workshop/
+m_alani:~/workspace (master) $ cd workshop/
+m_alani:~/workspace/workshop (master) $ clear
+m_alani:~/workspace/workshop (master) $ git clone https://github.com/m-alani/git_workshop.git
+Cloning into 'git_workshop'...
+remote: Counting objects: 24, done.
+remote: Compressing objects: 100% (17/17), done.
+remote: Total 24 (delta 5), reused 24 (delta 5), pack-reused 0
+Unpacking objects: 100% (24/24), done.
+Checking connectivity... done.
+m_alani:~/workspace/workshop (master) $ ls
+git_workshop/
+m_alani:~/workspace/workshop (master) $ cd git_workshop/
+m_alani:~/workspace/workshop/git_workshop (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (master) $ cd ..
+m_alani:~/workspace/workshop (master) $ ls
+git_workshop/
+m_alani:~/workspace/workshop (master) $ mkdir git_tutorial
+m_alani:~/workspace/workshop (master) $ cd git_tutorial/
+m_alani:~/workspace/workshop/git_tutorial (master) $ ls
+m_alani:~/workspace/workshop/git_tutorial (master) $ touch README.md
+m_alani:~/workspace/workshop/git_tutorial (master) $ ls
+README.md
+m_alani:~/workspace/workshop/git_tutorial (master) $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/workshop/git_tutorial/.git/
+m_alani:~/workspace/workshop/git_tutorial (master) $ ls
+README.md
+m_alani:~/workspace/workshop/git_tutorial (master) $ git add README.md 
+m_alani:~/workspace/workshop/git_tutorial (master) $ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+m_alani:~/workspace/workshop/git_tutorial (master) $ git commit -m "Chuck Norris Rocks"
+[master (root-commit) 8b64960] Chuck Norris Rocks
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+m_alani:~/workspace/workshop/git_tutorial (master) $ git status
+On branch master
+nothing to commit, working directory clean
+m_alani:~/workspace/workshop/git_tutorial (master) $ git remote add origin https://github.com/m-alani/git_tutorial.git
+m_alani:~/workspace/workshop/git_tutorial (master) $ git push -u origin master
+Username for 'https://github.com': ^C
+m_alani:~/workspace/workshop/git_tutorial (master) $ clear
+m_alani:~/workspace/workshop/git_tutorial (master) $ git push -u origin master
+Username for 'https://github.com': m-alani
+Password for 'https://m-alani@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 219 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/m-alani/git_tutorial.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+m_alani:~/workspace/workshop/git_tutorial (master) $ git branch
+* master
+m_alani:~/workspace/workshop/git_tutorial (master) $ ls
+README.md
+m_alani:~/workspace/workshop/git_tutorial (master) $ cat README.md 
+m_alani:~/workspace/workshop/git_tutorial (master) $ git pull origin master
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/m-alani/git_tutorial
+ * branch            master     -> FETCH_HEAD
+   8b64960..73579ca  master     -> origin/master
+Updating 8b64960..73579ca
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+m_alani:~/workspace/workshop/git_tutorial (master) $ cat README.md 
+We added a new line! YAY
+m_alani:~/workspace/workshop/git_tutorial (master) $ cd ..
+m_alani:~/workspace/workshop (master) $ ls
+git_tutorial/  git_workshop/
+m_alani:~/workspace/workshop (master) $ cd git_workshop/
+m_alani:~/workspace/workshop/git_workshop (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (master) $ git remote -v
+origin  https://github.com/m-alani/git_workshop.git (fetch)
+origin  https://github.com/m-alani/git_workshop.git (push)
+m_alani:~/workspace/workshop/git_workshop (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (master) $ cat names.txt 
+Add your names below !!
+
+=======================
+
+m_alani:~/workspace/workshop/git_workshop (master) $ git add names.txt 
+m_alani:~/workspace/workshop/git_workshop (master) $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   names.txt
+
+m_alani:~/workspace/workshop/git_workshop (master) $ git commit -m "added my name"
+[master f9099c3] added my name
+ 1 file changed, 1 insertion(+)
+m_alani:~/workspace/workshop/git_workshop (master) $ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+m_alani:~/workspace/workshop/git_workshop (master) $ git log
+commit f9099c346e853cd100aff284875b8b645253cbd6
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Thu Mar 17 22:53:14 2016 +0000
+
+    added my name
+
+commit 1fb03b88adbd220f512d86d13b95e364d6612c2e
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Thu Mar 17 03:38:29 2016 +0000
+
+    Added info about Status, Log, Diff, Reset
+
+commit 3ecc179bbaabd80c475a59f3fff114723af9fee9
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Thu Mar 17 02:32:51 2016 +0000
+
+    Added info about Forking, Branching, Merging, and Pull Requests
+
+commit bf7eb389abdb80fa806fb8f41f9eb79c20d248fd
+Merge: 824fd97 87866d4
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Thu Mar 17 02:03:34 2016 +0000
+
+    Merge branch 'master' of https://github.com/m-alani/git_workshop
+
+commit 824fd9765595090c92c963722b0dc6ed0095c1d0
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Thu Mar 17 02:03:03 2016 +0000
+
+    Completed 'working with own repo' section
+
+commit 87866d400c26c9895074e66335f782101e43a837
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Wed Mar 16 18:11:29 2016 -0400
+
+    Grammar cleanup
+
+commit e5629b3bde1f4ff0feba7b0df38e7291c83f4cfe
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Wed Mar 16 22:09:27 2016 +0000
+
+    Modified readme file
+
+commit 585e3545e86d7f91a843b538b98f2408eb263fde
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Wed Mar 16 22:07:07 2016 +0000
+
+    Created the general overview for the workshop
+
+commit 7a4f7bffa22f3eca1c186a88de2cfd6db66310cc
+Author: Marwan Alani <marwan@alani.ca>
+Date:   Tue Mar 15 16:59:35 2016 -0400
+
+    Initial commit
+m_alani:~/workspace/workshop/git_workshop (master) $ clear
+m_alani:~/workspace/workshop/git_workshop (master) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (master) $ git push origin master
+Username for 'https://github.com': m-alani
+Password for 'https://m-alani@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 348 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/m-alani/git_workshop.git
+   1fb03b8..f9099c3  master -> master
+m_alani:~/workspace/workshop/git_workshop (master) $ git checkout -b Viriatus-master master
+Switched to a new branch 'Viriatus-master'
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master) $ git branch
+* Viriatus-master
+  master
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master) $ git pull https://github.com/Viriatus/git_workshop.git master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Viriatus/git_workshop
+ * branch            master     -> FETCH_HEAD
+Auto-merging names.txt
+CONFLICT (content): Merge conflict in names.txt
+Automatic merge failed; fix conflicts and then commit the result.
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master|MERGING) $ git checkout master
+names.txt: needs merge
+error: you need to resolve your current index first
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master|MERGING) $ git merge --no-ff Viriatus-master
+error: merge is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master|MERGING) $ cat names.txt 
+Add your names below !!
+
+=======================
+
+<<<<<<< HEAD
+Marwan Alani
+=======
+Lukashenko
+Putin
+Poroshenko
+Karimov
+>>>>>>> 5dcaf09e9113c647103bef15cf046160622b9693
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master|MERGING) $ git add names.txt 
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master|MERGING) $ git commit -m "fixed conflict"
+[Viriatus-master b06f8dd] fixed conflict
+m_alani:~/workspace/workshop/git_workshop (Viriatus-master) $ git checkout master                              
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+m_alani:~/workspace/workshop/git_workshop (master) $ git merge --no-ff Viriatus-master                         
+Merge made by the 'recursive' strategy.
+ names.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch
+  Viriatus-master
+* master
+m_alani:~/workspace/workshop/git_workshop (master) $ cat names.txt 
+Add your names below !!
+
+=======================
+
+Marwan Alani
+=======
+
+Putin
+
+=======
+m_alani:~/workspace/workshop/git_workshop (master) $ git push origin master
+Username for 'https://github.com': m-alani
+Password for 'https://m-alani@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 837 bytes | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+To https://github.com/m-alani/git_workshop.git
+   f9099c3..95feb54  master -> master
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch
+  Viriatus-master
+* master
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch remove Viriatus-master
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch
+  Viriatus-master
+* master
+  remove
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch
+  Viriatus-master
+* master
+  remove
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch -d remove
+Deleted branch remove (was b06f8dd).
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch -d Viriatus-master
+Deleted branch Viriatus-master (was b06f8dd).
+m_alani:~/workspace/workshop/git_workshop (master) $ git branch
+* master
+m_alani:~/workspace/workshop/git_workshop (master) $ git checkout -b test
+Switched to a new branch 'test'
+m_alani:~/workspace/workshop/git_workshop (test) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (test) $ ls
+README.md  names.txt  tutorial.txt
+m_alani:~/workspace/workshop/git_workshop (test) $ cat names.txt 
+Add your names below !!
+
+=======================
+
+Marwan Alani
+=======
+
+Putin
+
+=======
+
+Another namem_alani:~/workspace/workshop/git_workshop (test) $ cat names.txt 
+Add your names below !!
+
+=======================
+
+Marwan Alani
+=======
+
+Putin
+
+=======
+
+Another name
+m_alani:~/workspace/workshop/git_workshop (test) $ git commit -am "added another name"
+[test 2157590] added another name
+ 1 file changed, 2 insertions(+)
+m_alani:~/workspace/workshop/git_workshop (test) $ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+m_alani:~/workspace/workshop/git_workshop (master) $ git merge test
+Updating 95feb54..2157590
+Fast-forward
+ names.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+m_alani:~/workspace/workshop/git_workshop (master) $ 
