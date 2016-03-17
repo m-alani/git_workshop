@@ -1,0 +1,54 @@
+Well hello there :)
+
+Git Things Ready:
+=================
+
+We're assuming that you have Git already up and running on your computer, otherwise take a look below on how to install it:
+* Windows: go to "https://git-scm.com/download" and download the installer. Go through the installation process and make sure that you install "Git Bash"
+* Mac OS X: If running the command "git" from your terminal doesn't work, you can either follow the instructions you'll see in the terminal, or alternatively go to "https://git-scm.com/download" and install the Mac OS package and install it.
+* Linux (Ubuntu and Ubuntu Based): If running the command "git" from your terminal doesn't work, you can either follow the instructions you'll see in the terminal (type "sudo apt-get install git" in your teminal). 
+
+We also assume that you already have a GitHub account. If not, then go to "https://github.com" and make an account now. Take note of your username and password, you'll need it down the road for this tutorial.
+
+
+Let's Git Started:
+======================
+
+Note: Going forward, all commands are expected to be run in your Git Bash (on Windows) or your Terminal windows (Mac & Linux) unless stated otherwise.
+
+
+
+Clonning The Workshop:
+----------------------
+
+Go to the directory you want to clone the repo into and type "git clone https://github.com/m-alani/git_workshop.git"  
+You'll have all the files for the workshop inside the directory called "git_workshop"  
+
+
+Working with your own repo:
+---------------------------
+
+Go to github.com, login with your account and create a new repo (green button saying "+ New repository". Name it "git_tutorial".
+  
+Now, let's make a local repo and try to upload it to our newly created repo on github.
+
+Create a directory locally, preferably named "git_tutorial" 
+
+Create a text file inside "git_tutorial" and name it "README.md"
+
+In your terminal/git bash, go inside the directory you just created
+
+Type "git init" (This will initialize an empty Git repo)
+
+Type "git add README.md" (This will add the file to the staging area)
+
+Type "git commit -m 'My first commit' " (Your first commit to the repo)
+
+Type "git remote add origin https://github.com/[username]/git_tutorial.git" (Add the repo you created on GitHub to the list of remotes in your local repo)
+
+Type "git push -u origin master" (This will push any commits you have on your master branch to your origin remote)
+
+Congrats, you've succesfully made changes locally, and pushed them to your GitHub repo (got check it out on your GitHub account)
+
+
+// Follow instructions in the workshop to see how to pull changes to your local repo.
