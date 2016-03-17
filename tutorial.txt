@@ -21,7 +21,8 @@ Note: Going forward, all commands are expected to be run in your Git Bash (on Wi
 Clonning The Workshop:
 ----------------------
 
-Go to the directory you want to clone the repo into and type "git clone https://github.com/m-alani/git_workshop.git"  
+Go to the directory you want to clone the repo into and type "git clone https://github.com/m-alani/git_workshop.git"
+
 You'll have all the files for the workshop inside the directory called "git_workshop"  
 
 
@@ -50,5 +51,39 @@ Type "git push -u origin master" (This will push any commits you have on your ma
 
 Congrats, you've succesfully made changes locally, and pushed them to your GitHub repo (got check it out on your GitHub account)
 
-
 // Follow instructions in the workshop to see how to pull changes to your local repo.
+
+
+Forking someone else's repo:
+----------------------------
+
+In your browser, go to "https://github.com/m-alani/git_workshop"
+
+Click on the "Fork" option in the top-right corner. This will make a copy of the repo you're at into your own account.
+
+Use the commands you learned already to "clone" the repo you just forked (Don't forget, ask if you're not sure about something)
+
+Type "git checkout -b 'testing' " (This will copy everything you have in the current branch (master) into a new branch called 'testing') and also switches you to the new branch.
+
+Now that you have a local clone of the repo you forked from "m-alani", and you're working in a new branch, try opening the file "names.txt" in a text editor, and add your name under the line as instructed. Save the file once done.
+
+Type "git commit -am 'added my name' " (ask us how is this different than 'git add')
+
+Type "git branch" to see the branches in your repo, then type "git checkout master" to switch to that branch.
+
+Open "names.txt" and confirm that your name is not there (if you don't see why it's not there, ask us) 
+
+Type "git merge testing" (This will show you the differences between your current branch and 'testing', and merge them into your current branch 'master')
+
+Now that we've merged the branches, we don't really need 'testing', so, let's delete it.
+
+Type "git branch -d testing" (Ask about the difference between -d and -D switches)
+
+Now try pushing the commited changes from your local master to your GitHub origin (You've used the command before, but if you forget, just ask)
+
+// Ask us what a "pull request" is, and how to perform one
+
+
+Other useful commands:
+----------------------
+
