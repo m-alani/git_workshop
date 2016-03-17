@@ -87,3 +87,27 @@ Now try pushing the commited changes from your local master to your GitHub origi
 Other useful commands:
 ----------------------
 
+<< status >>
+git status (try it out to see what it does)
+
+<< log >>
+git log
+git log -p (to show the changes in each commit)
+git log -2 (to show the log for the last 2 commits only)
+git log --pretty=oneline (to show the commit id and message only on 1 line)
+   (other "pretty" options to try instead of "oneline": "short" or "full"
+
+<< diff >>
+git diff (will display nothing if there has been no changes after the last commit)
+git diff [branch1]..[branch2] (shows the difference between the 2 branches' heads)
+
+<< reset >>
+git reset --hard [commit_id] (Delete all changes and move back to the commit you indicated)
+
+<< checkout >> (to restore a single file to the last commited version you had)
+git checkout -- [filename] (this will basically discard all changes made to the file since last commit)
+
+
+
+
+Questions ?
